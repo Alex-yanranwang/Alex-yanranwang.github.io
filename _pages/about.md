@@ -18,11 +18,13 @@ Please feel free to contact should you be interested in his research.
 
 News
 ===  
-* September 10, 2022, our paper “[QuaDUE-CCM: Interpretable Distributional Reinforcement Learning using Uncertain Contraction Metrics for Precise Quadrotor Trajectory Tracking](https://arxiv.org/abs/2207.07789)” is accepted to CoRL 2022.
-* July 15, 2022, our paper “[Interpretable Stochastic Model Predictive Control using Distributional Reinforced Estimation for Quadrotor Tracking Systems](https://arxiv.org/abs/2205.07150)” is accepted to CDC 2022.
-* May 26, 2022, I will give an oral presentation on ICRA 2022 in person, in Philadelphia. Hopefully see you all!
-* January 31, 2022, our paper “[KinoJGM: A framework for efficient and accurate quadrotor trajectory generation and tracking in dynamic environments](https://arxiv.org/abs/2202.12419)” is accepted to ICRA 2022 (Philadelphia, United States)!
-* November 4, 2021, I just pass my Early Stage Accessment (ESA) :) 
+* May 2024, our paper “[On solving close enough orienteering problems with overlapped neighborhoods]([https://arxiv.org/abs/2302.11694](https://www.sciencedirect.com/science/article/pii/S0377221724003916))” is accepted to European Journal of Operational Research.
+* February 2024, our paper “[Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control](https://arxiv.org/abs/2302.11694)” is conditionally accepted to IEEE Transactions on Automation Science and Engineering.
+* September 2022, our paper “[QuaDUE-CCM: Interpretable Distributional Reinforcement Learning using Uncertain Contraction Metrics for Precise Quadrotor Trajectory Tracking](https://arxiv.org/abs/2207.07789)” is accepted to CoRL 2022.
+* July 2022, our paper “[Interpretable Stochastic Model Predictive Control using Distributional Reinforced Estimation for Quadrotor Tracking Systems](https://arxiv.org/abs/2205.07150)” is accepted to CDC 2022.
+* May 2022, I will give an oral presentation on ICRA 2022 in person, in Philadelphia. Hopefully see you all!
+* January 2022, our paper “[KinoJGM: A framework for efficient and accurate quadrotor trajectory generation and tracking in dynamic environments](https://arxiv.org/abs/2202.12419)” is accepted to ICRA 2022 (Philadelphia, United States)!
+* November 2021, I just pass my Early Stage Accessment (ESA) :) 
 * May 1, 2021, I am very excited to enroll in Dyson School at Imperial College as a new PhD student. An exciting journey has begun!
 * April 1, 2020, I will be a PhD student in Imperial College London.
 * March 31, 2020, I graduate with a master's degree (with honor) in Shanghai Jiao Tong University.
