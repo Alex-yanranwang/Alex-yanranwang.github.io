@@ -18,7 +18,7 @@ Please feel free to contact should you be interested in his research.
 
 News
 ===  
-* May 2024, our paper “[Probabilistic Constrained Reinforcement Learning with Formal Interpretability](https://arxiv.org/abs/2307.07084)” is accepted to the International Conference on Machine Learning (ICML). See you in Vienna, Austria.
+* May 2024, our paper “[Probabilistic Constrained Reinforcement Learning with Formal Interpretability](https://arxiv.org/abs/2307.07084)” is accepted to the International Conference on Machine Learning (ICML). See you in Vienna, Austria, on July 21st-27th.
 * May 2024, our paper “[On solving close enough orienteering problems with overlapped neighborhoods](https://www.sciencedirect.com/science/article/pii/S0377221724003916)” is accepted to European Journal of Operational Research.
 * February 2024, our paper “[Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control](https://arxiv.org/abs/2302.11694)” is conditionally accepted to IEEE Transactions on Automation Science and Engineering.
 * September 2022, our paper “[QuaDUE-CCM: Interpretable Distributional Reinforcement Learning using Uncertain Contraction Metrics for Precise Quadrotor Trajectory Tracking](https://proceedings.mlr.press/v205/wang23d.html)” is accepted to CoRL 2022.
