@@ -10,7 +10,7 @@ redirect_from:
 
 Yanran Wang is a Ph.D. student at [Imperial College London](https://www.imperial.ac.uk/), where he is fortunate to be supervised by [Dr. David Boyle](https://www.imperial.ac.uk/people/david.boyle) and co-supervised by [Prof. Robert Shorten](https://robertshorten.com/). Prior to joining Imperial College, he received an M.S. degree in Information and Control at [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/), Shanghai, China, in 2020, and a B.S. degree in Automation at [Southeast University](https://www.seu.edu.cn/), Nanjing, China, in 2017.
 
-His research interests lie in **Trustworthy Autonomous System Design**, with a focus on **Formal Guarantees** on **Interpretable** reinforcement learning and optimal control theories. Particularly, he is keen on developing theories and algorithms that enhance the interpretability of intelligent (aerial) robots. Beyond his academic pursuits, he has a deep passion for classical music and sports.
+His research interests lie in **Trustworthy Autonomous System Design**, with a focus on **Formal Guarantees** on **Interpretable** reinforcement learning and optimal control theories. Practically, he is keen on developing theories and algorithms that enhance the interpretability of intelligent (aerial) robots. Beyond his academic pursuits, he has a deep passion for classical music and sports.
 
 Please feel free to reach out should you be interested in his research.
 
