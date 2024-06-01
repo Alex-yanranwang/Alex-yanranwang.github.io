@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-If you are interested in my research, please move to my Google Scholar page, linked in the left sidebar.
+If you are interested in my research, please move to my [Google Scholar](https://scholar.google.com/citations?user=IN9B5GcAAAAJ&hl=en) page, linked in the left sidebar.
 
 ## Selected Publications
 <b>[KinoJGM: A framework for efficient and accurate quadrotor trajectory generation and tracking in dynamic environments.](https://arxiv.org/abs/2202.12419)</b><br>
