@@ -12,7 +12,7 @@ Yanran Wang is a Ph.D. student at [Imperial College London](https://www.imperial
 
 His research interests lie in **Trustworthy Autonomous System Design**, with a focus on **Formal Guarantees** on **Interpretable** reinforcement learning and optimal control theories. Particularly, he is keen on developing theories and algorithms that enhance the interpretability of intelligent (aerial) robots. Beyond his academic pursuits, he has a deep passion for classical music and sports.
 
-Please feel free to contact should you be interested in his research.
+Please feel free to reach out should you be interested in his research.
 
 **Reminder** [[Calendar](https://aideadlin.es/?sub=ML,RO)] 
 
