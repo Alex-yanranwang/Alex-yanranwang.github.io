@@ -18,7 +18,7 @@ Beyond his academic pursuits, he has a deep passion for classical music and spor
 
 News
 ===  
-* June 2024, our paper “[Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control](https://arxiv.org/abs/2302.11694)” was accepted to the IEEE Transactions on Automation Science and Engineering! : )
+* June 2024, our paper “[Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control](https://arxiv.org/abs/2302.11694)” was accepted to the IEEE Transactions on Automation Science and Engineering (IEEE T-ASE) !
 * May 2024, our paper “[Probabilistic Constrained Reinforcement Learning with Formal Interpretability](https://arxiv.org/abs/2307.07084)” was accepted to the 41st International Conference on Machine Learning (ICML). Will see you in Vienna, Austria, on July 21st-27th.
 * May 2024, our paper “[On solving close enough orienteering problems with overlapped neighborhoods](https://www.sciencedirect.com/science/article/pii/S0377221724003916)” was accepted to the European Journal of Operational Research (EJOR).
 * September 2022, our paper “[QuaDUE-CCM: Interpretable Distributional Reinforcement Learning using Uncertain Contraction Metrics for Precise Quadrotor Trajectory Tracking](https://proceedings.mlr.press/v205/wang23d.html)” was accepted to the 6th Conference on Robot Learning (CoRL), in Auckland, New Zealand, 2022.
