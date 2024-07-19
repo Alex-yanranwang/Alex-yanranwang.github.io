@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Real-Time Visual-Inertial Dense Mapping with Deep Multi-View Stereo">
+  <meta name="keywords" content="AWaVO">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWaVO</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script> -->
+
+<!-- <link rel="icon" type="image/png" href="media/nice-slam/like.png">  -->
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./projects/AWaVO/css/bulma.min.css">
+  <link rel="stylesheet" href="./projects/AWaVO/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./projects/AWaVO/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./projects/AWaVO/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./projects/AWaVO/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./projects/AWaVO/js/fontawesome.all.min.js"></script>
+  <script src="./projects/AWaVO/js/bulma-carousel.min.js"></script>
+  <script src="./projects/AWaVO/js/bulma-slider.min.js"></script>
+  <script src="./projects/AWaVO/js/index.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://alex-yanranwang.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <!-- <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet - ECCV 2020
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered">
+        <div class="column is-7 has-text-centered">
+          <img src="media/nice-slam/nice-slam-logo2.png" alt="NICE-SLAM"/>
+        </div>
+      </div> -->
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"><img src="media/nice-slam/like.png" width="90">NICE-SLAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Neural Implicit Scalable Encoding for SLAM</h1> -->
+          <h1 class="title is-2 publication-title">Probabilistic Constrained Reinforcement Learning with Formal Interpretability</h1>
+          <h1 class="title is-2 publication-title">AWaVO</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-5">International Conference on Machine Learning (ICML) 2024</h2>
+          </div>
+          <!-- <br> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://alex-yanranwang.github.io/">Yanran Wang</a><sup>*</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="author-block">
+                  <a href="https://bruceqqc.github.io/">Qiuchen (Bruce) Qian</a><sup></sup></span>&nbsp;&nbsp;&nbsp;&nbsp;  
+              </span>
+              <span class="author-block">
+                <a href="https://profiles.imperial.ac.uk/david.boyle">David Boyle</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+            </div>
+            <div class="column is-full_width">
+              <h2 class="is-size-6">* Corresponding Author</h2>
+            <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Systems and Algorithms Lab, Imperial College London, United Kingdom.</span>&nbsp;&nbsp;
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://proceedings.mlr.press/v235/wang24bf.html" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2307.07084" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=Auatih9Kxbw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <!-- <span class="link-block">
+                <a href="media/nice-slam/poster_nice-slam.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-palette"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span> -->
+              <!-- Code Link. -->
+               <span class="link-block">
+               <a href="https://github.com/Alex-yanranwang/AWaVO" target="_blank"
+		   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span >Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="projects/AWaVO/shortDemo.mp4"
+                type="video/mp4">
+      </video>
+      <!-- <img class="rounded" src="./projects/simplemapping/cover.png" > -->
+      <br><br><br>
+      <h2 class="subtitle has-text-centered">
+      Practical implementation of our <strong>AWaVO</strong> as a tracking controller for a quadrotor. The aim of the real-world tasks is to track the reference effectively and accurately, where <a href="https://github.com/ZJU-FAST-Lab/VID-Fusion"><em>VID-Fusion</em></a> is used
+      to measure external forces such as aerodynamic effects.
+    </h2>
+    <!-- <h2 class="subtitle has-text-centered">
+      (The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)
+    </h2> -->
+    <!-- <h2 class="is-size-6 has-text-centered">(The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)</h2> -->
+    
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+                <iframe src="https://www.youtube.com/embed/Auatih9Kxbw?si=ru-Ri8B7kXhs1wMi"></iframe>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+
+    <br>
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation - Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>We present AWaVO, the first intrinsically interpretable constrained Reinforcement Learning (RL) framework, through the lens of probabilistic inference. The <u>Key Challenges</u> surrounding RL's interpretability can be conceptualized through three distinct phases:</b>
+          </p>
+          <p>
+            <b>
+              <u>a. Guarantee of convergence</u> ensures that an RL converges towards an optimal policy, e.g., in an asymptotic manner.
+              <u>b. Transparency in training convergence</u> emphasizes the identification of the underlying convergence process during an RL training. An instance is the convergence rate. Given training iterations, this rate enables the prediction of the expected level of convergence, with a certain degree of confidence.
+              <u>c. Interpretation of decisions</u> seeks to explain why these  sequential decisions were made given a state and environment. Specifically, this interpretation involves clarifying the quantitative impact of latent factors on these sequential decisions.
+            </b>
+          </p>
+          <p>
+            Abstract: Reinforcement learning can provide effective reasoning for sequential decision-making problems with variable dynamics. Such reasoning in practical implementation, however, poses a persistent challenge in interpreting the reward function and the corresponding optimal policy. Consequently, representing sequential decision-making problems as probabilistic inference can have considerable value, as, in principle, the inference offers diverse and powerful mathematical tools to infer the stochastic dynamics whilst suggesting a probabilistic interpretation of policy optimization. In this study, we propose a novel Adaptive Wasserstein Variational Optimization, namely AWaVO, to tackle these interpretability challenges. 
+            Our approach uses formal methods to achieve the interpretability for convergence guarantee, training transparency, and intrinsic decision-interpretation. To demonstrate its practicality, we showcase guaranteed interpretability with a global convergence rate $\Theta(1/\sqrt{T})$ in simulation and in practical quadrotor tasks. In comparison with state-of-the-art benchmarks, including TRPO-IPO, PCPO, and CRPO, we empirically verify that AWaVO offers a reasonable trade-off between high performance and sufficient interpretability.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <img src="projects/AWaVO/adaptive_sliding.jpg" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            System overview of <strong>AWaVO</strong>. We reform constrained RL as a Wasserstein variational optimization setup, consisting of two primary submodules: Optimality-Rectified Policy Optimization using Distributional Representation (ORPO-DR) and Wasserstein Variational Inference (WVI).
+          </p>
+          <p>
+            <u>a. ORPO</u> is conducted to dynamically adapt to uncertainties; and DR provides an entire distribution of the action-value function, contributing to heightened transparency in the convergence. Consequently, this efficiently tackles a significant portion of the deficiencies outlined in <b>Key Challenge a</b> and <b>b</b>.
+          </p>
+          <p>
+            <u>b. WVI</u> is performed to achieve the quantitative interpretation - i.e., probabilistic interpretation of decisions, thereby tackling <b>Key Challenge c</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Experimental Results.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Experimental Results</h2>
+      </div>
+    </div>
+    <h2 class="is-size-6 has-text-centered">(Baseline denotes the same setting hypermeters and environments integrated with AWaVO.)</h2>
+    <p>
+      &nbsp
+    </p>
+    <h3 class="title is-4">Comparative Performance in Simulated Tasks</h3>
+    <p>  
+      Performance comparison over 10 seeds. CRPO and AWaVO outperform PaETS, with a trade-off highlighted: although PaETS offers probabilistic interpretation with Bayesian networks, its convergence is generally unstable. 
+      Our proposed <strong>AWaVO</strong> achieves a better balance between high performance and interpretability. In contrast to two other constrained RL algorithms, i.e., TRPO-IPO and PCPO, we observe an interesting result: PCPO performs better in tasks like Acrobot, Cartpole, and Walker, while TRPO-IPO outperforms PCPO in the more complex drone tasks. Further, in the <strong>Real-world Tasks</strong> below, we will explore more complex real-world tasks using an aerial robot.
+    </p>
+    <div class="columns is-centered has-text-centered">
+    </div>
+    <!--video id="euroc" autoplay muted loop height="100%">
+      <source src="projects/simplemapping/euroc.mp4"
+              type="video/mp4">
+    </video-->
+    <p>
+      <br> 
+      <img src="projects/AWaVO/Simulation_learning_curve.jpg" class="center"/>
+    </p>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <h3 class="title is-4">Comparative Performance in Real-world Tasks</h3>
+    <p>
+      We use our <strong>AWaVO</strong> as the tracking controller for a quadrotor, where ORPO-DR is employed as the uncertainty estimator, and WVI using A-GSWD is leveraged as the controller. Performance comparison in a real quadrotor: our AWaVO slightly outperforms the constrained RL approach, i.e., PCPO.
+    </p>
+    <div class="columns is-centered has-text-centered">
+    </div>
+    <video id="real_world_0" autoplay muted loop height="100%">
+      <source src="projects/AWaVO/control_framework.mp4"
+              type="video/mp4">
+    </video>
+    <!--video id="real_world_1" autoplay muted loop width="80%" height="80%">
+      <source src="projects/AWaVO/real_world_training.mp4"
+              type="video/mp4">
+    </video-->
+
+  </p>
+  <div class="columns is-centered">
+    <img id="real_world_2" src="projects/AWaVO/LearningCurve_inRealWorld.jpg" style="width:700px;" >
+  </div>
+  <p>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+      <h3 class="title is-4">Probabilistic Interpretation of Decisions</h3>
+      <p>
+        Real quadrotor Flight Tasks (FTs):
+      </p>
+      <p>
+        <strong>FT 1 -</strong> tracking reference trajectories under external forces without obstacles;
+      </p>
+      <p><strong>FT 2 -</strong> tracking trajectories around dense obstacles;</p>
+      <p><strong>FT 3 -</strong> tracking trajectories under external forces around dense obstacles.</p>
+      <p>
+        &nbsp
+      </p>
+      <p>
+        <div class="columns is-centered">
+          <img id="interpretation" src="projects/AWaVO/real-world_flight_tasks.jpg" style="width:800px;" >
+        </div>
+      </p>
+      <p>
+        The probability $p(\tau|L_0)$ reveals the degree to which the measurement of external forces, denoted as $n_f$, influences the decisions made by the quadrotor.
+      </p>
+      <p>
+        &nbsp
+      </p>
+      <p>
+        &nbsp
+      </p>
+      <div class="columns is-centered">
+        <img id="interpretation" src="projects/AWaVO/flight_task_prob_interp_adjust.jpg" style="width:800px;" >
+      </div>
+      <p>
+        The curves in the Figure (a), provided as a reference, give the estimated values of external aerodynamic forces (winds) in real-time. These estimates are derived from the signals collected from onboard sensors. 
+        In the Figure (b), the curves illustrate the quantitative impact of external forces $L_0$ on current sequential decisions, specifically, the planned trajectory $\tau$. 
+        This impact is quantified as parts of pulse width modulation signals that are fed into the motors to either resist or cooperate with the measured (or identified) aerodynamic forces. Figure (b) aims to quantitatively interpret and visually convey the decision-making process in response to external forces.
+      </p>
+      <br>
+      <p>
+        Figure (b) becomes particularly important when the agent makes sub-optimal decisions leading to events like quadrotor crashes or collisions. 
+        These curves prove valuable for interpreting and performing quantitative analyses of distinct environmental factors, such as winds and obstacles, allowing for an understanding of their magnitudes of influence on the current decision-making process.
+      </p>
+      <br>
+      <p>
+        <strong>An instance to interpret Figure (b).</strong> In the case of Reference State 02 (RS 02), located in an area with a combination of wind and obstacles, both aerodynamic effects (i.e., external forces) from winds and obstacles act simultaneously on the quadrotor. In Flight Task 3 (FT 3), represented by the red curve, we can observe the influence of external forces (i.e., aerodynamic effects from winds and obstacles) on the current trajectory planning decisions. The value is approximately $0.40$ at RS 02, implying that the ongoing trajectory planning decisions have a $40\%$ probability of being influenced by the aerodynamic effects. 
+        Comparing FT 1 and FT 2, where the values at RS 02 are approximately $0.20$ (FT 1) and $0.18$ (FT 2), respectively, we can decouple the aerodynamic effects generated by the wind on the body (FT 1) and obstacles (FT 2). Quantitatively, at RS 02, situated in an area with a mix of wind and obstacles, the red $p(\tau|L_0)_{FT3}$ is approximately equal to the sum of $p(\tau|L_0)_{FT1}$ (only wind) and $p(\tau|L_0)_{FT2}$ (only obstacles).
+      </p>
+      <p>
+        &nbsp
+      </p>
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{wang24probabilistic,
+        title = {Probabilistic Constrained Reinforcement Learning with Formal Interpretability},
+        author = {Wang, Yanran and Qian, Qiuchen and Boyle, David},
+        booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+        pages = {51303--51327},
+        year = {2024},
+        volume = {235},
+        series = {Proceedings of Machine Learning Research},
+        publisher = {PMLR}
+      }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    TThis work was partially supported by NSF-UKRI [grant number NE/T011467/1]; and the Engineering and Physical Sciences Research Council [grant number EP/X040518/1].
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
