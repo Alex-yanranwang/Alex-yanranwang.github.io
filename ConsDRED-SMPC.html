@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control">
+  <meta name="keywords" content="ConsDRED-SMPC">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConsDRED-SMPC</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script> -->
+
+<!-- <link rel="icon" type="image/png" href="media/nice-slam/like.png">  -->
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./projects/ConsDRED-SMPC/css/bulma.min.css">
+  <link rel="stylesheet" href="./projects/ConsDRED-SMPC/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./projects/ConsDRED-SMPC/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./projects/ConsDRED-SMPC/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./projects/ConsDRED-SMPC/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./projects/ConsDRED-SMPC/js/fontawesome.all.min.js"></script>
+  <script src="./projects/ConsDRED-SMPC/js/bulma-carousel.min.js"></script>
+  <script src="./projects/ConsDRED-SMPC/js/bulma-slider.min.js"></script>
+  <script src="./projects/ConsDRED-SMPC/js/index.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://alex-yanranwang.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <!-- <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet - ECCV 2020
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered">
+        <div class="column is-7 has-text-centered">
+          <img src="media/nice-slam/nice-slam-logo2.png" alt="NICE-SLAM"/>
+        </div>
+      </div> -->
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"><img src="media/nice-slam/like.png" width="90">NICE-SLAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Neural Implicit Scalable Encoding for SLAM</h1> -->
+          <h1 class="title is-2 publication-title">Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control</h1>
+          <!--h1 class="title is-2 publication-title">ConsDRED-SMPC</h1-->
+          <div class="column is-full_width">
+            <h2 class="title is-5">IEEE Transactions on Automation Science and Engineering</h2>
+          </div>
+          <!-- <br> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://alex-yanranwang.github.io/">Yanran Wang</a><sup>*</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://profiles.imperial.ac.uk/david.boyle">David Boyle</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+            </div>
+            <div class="column is-full_width">
+              <h2 class="is-size-6">* Corresponding Author</h2>
+            <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Systems and Algorithms Lab, Imperial College London, United Kingdom.</span>&nbsp;&nbsp;
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10614102" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2302.11694" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/Yciyalys6XY?si=kYDzHKMGlbNn3pf5"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <!-- <span class="link-block">
+                <a href="media/nice-slam/poster_nice-slam.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-palette"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span> -->
+              <!-- Code Link. -->
+               <span class="link-block">
+               <a href="https://github.com/Alex-yanranwang/ConsDRED-SMPC" target="_blank"
+		   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span >Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="projects\ConsDRED-SMPC\shortVideo.mp4"
+                type="video/mp4">
+      </video>
+      <br><br><br>
+      <h2 class="subtitle has-text-justified">
+      <p>
+        <strong>ConsDRED-SMPC</strong> - Practical implementation for challenging flight scenarios:
+      </p>
+      <p>
+        &nbsp
+      </p>
+      <p>
+      This implementation aims to address complex flight scenarios: <u>dynamic (and unknown) constraint areas</u> + <u>unforeseen external forces</u> + <u>dense obstacles</u>. <a href="https://github.com/ZJU-FAST-Lab/VID-Fusion"><em>VID-Fusion</em></a> is used
+      to measure external forces, such as aerodynamic effects.
+      </p>
+    </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+                <iframe src="https://www.youtube.com/embed/Yciyalys6XY?si=Ha3O1II0wo5z9GtM"></iframe>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+
+    <br>
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation - Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>This work is motivated by challenges in training Reinforcement Learning (RL) for autonomous navigation in unmanned aerial vehicles, but its implications extend to other high-criticality applications in, for example, healthcare and financial services.
+              The implementation of RL algorithm policies may exhibit various deficiencies, including:
+            </b>
+          </p>
+          <p>
+            <b>
+              <u>a. opaque or unstable training</u> due to the blackbox nature of deep neural networks;
+              <u>b. difficulty in reproducing RL outcomes</u>;
+              <u>c. heightened costs</u> associated with robustness investigation, e.g., hyperparameter tuning and generalization.
+            </b>
+          </p>
+          <p>
+            Abstract: Simultaneously accurate and reliable tracking control for quadrotors in complex dynamic environments is challenging. The chaotic nature of aerodynamics, derived from drag forces and moment variations, makes precise identification difficult. Consequently, many existing quadrotor tracking systems treat these aerodynamic effects as simple `disturbances' in conventional control approaches.
+            We propose a novel and interpretable trajectory tracker integrating a distributional Reinforcement Learning (RL) disturbance estimator for unknown aerodynamic effects with a Stochastic Model Predictive Controller (SMPC). Specifically, the proposed estimator `Constrained Distributional REinforced-Disturbance-estimator' (ConsDRED) effectively identifies uncertainties between the true and estimated values of aerodynamic effects. Control parameterization employs simplified affine disturbance feedback to ensure convexity, which is seamlessly integrated with the SMPC.
+            We theoretically guarantee that ConsDRED achieves an optimal global convergence rate, and sublinear rates if constraints are violated with certain error decreases as neural network dimensions increase. To demonstrate practicality, we show convergent training, in simulation and real-world experiments, and empirically verify that ConsDRED is less sensitive to hyperparameter settings compared with canonical constrained RL. Our system substantially improves accumulative tracking errors by at least 70%, compared with the recent art. Importantly, the proposed ConsDRED-SMPC framework balances the trade-off between pursuing high performance and obeying conservative constraints for practical implementations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <img src="projects/ConsDRED-SMPC/RL_Control_framework.jpg" class="center" style="width:80%;"/>
+        
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            System overview of <strong>ConsDRED-SMPC</strong>:
+          </p>
+          <p>
+          </p>
+          <p>
+            We propose <strong>Cons</strong>trained <strong>D</strong>istributional <strong>RE</strong>inforced-<strong>D</strong>isturbance-estimation for Stochastic MPC (ConsDRED-SMPC), a systematic, trustworthy and feasible quadrotor trajectory tracking framework for use under high variance aerodynamic effects.
+            To our best knowledge, this study represents <u>the first attempt within the robot learning community to develop a trustworthy interpretation of an RL-based disturbance estimator</u> through practical implementation. The details are as
+          </p>
+          <p>
+            (i) <u>An aerodynamic Disturbance Estimator</u>, i.e., ConsDRED, is proposed for aerodynamic disturbance estimation. This estimation relies on the wind estimation obtained from <a href="https://github.com/ZJU-FAST-Lab/VID-Fusion"><em>VID-Fusion</em></a>.
+          </p>
+          <p>
+            (ii) <u>A tracking controller</u>, i.e., SMPC, a Simplified Affine Disturbance Feedback (SADF) is used for control parameterization in SMPC.
+            Specifically, we use an Input-to-State Stability (ISS) property to imply stability and convergence of the tracker.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Experimental Results.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Experimental Results</h2>
+      </div>
+    </div>
+    <h2 class="is-size-6 has-text-centered">(Baseline denotes the same setting hypermeters and environments integrated with ConsDRED-SMPC.)</h2>
+    <p>
+      &nbsp
+    </p>
+    <h3 class="title is-4"> Tracking Performance in Simulated Tasks</h3>
+    <p>  
+      The flight task in the simulated scenario is to track the seven reference waypoints.
+      In the external disturbance zone, the quadrotor system operates with the programmatic external forces, i.e., ${E}_{f,1}=[0.0, 3.0, 0.0]$ ($ms^{-2}$), ${E}_{f,2}=[-3.0, 3.0, 0.0]$ ($ms^{-2}$) and ${E}_{f,2}=[-4.0, 4.0, 0.0]$ ($ms^{-2}$), in the horizontal plane.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/simulation_env.jpg" class="center" style="width:90%;"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <div class="content has-text-justified">
+      <p>
+        <strong>The learning curves</strong> and <strong>the robustness of the tolerance hyperparameter ${\tau}_{c}$ setting</strong>, in relation to the convergence process:
+      </p>
+    </div>
+    <p>
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/learning_curve.jpg" class="center" style="width:50%;"/>
+      <img src="projects/ConsDRED-SMPC/torlerance.jpg" class="center" style="width:50%;"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/simulation_test_rev2.jpg" class="center" style="width:100%;"/>
+    </div>
+    <p>
+      <strong>The simulation tracking performance</strong> is assessed with variance measurement: <u>the external force estimation ${e}_{f}$($m/s^{2}$)</u>, <u>linear velocity $\left \|{V}_{B}\right \|_2$</u>, <u>acceleration $\left \|{a}_{B}\right \|_2$</u>, <u>the control input $T_y$</u> (expressed in the body frame), and <u>tracking position error ($m$)</u>.
+      The X-axis unit corresponds to the number of sampling times, with 1100 sampling points evenly distributed along a trajectory.
+      The results from a single run are depicted in the figure below.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/simulation_test.jpg" class="center" style="width:90%;"/>
+    </div>
+    <p>
+      <strong>The simulation results from one run</strong> include the external force estimation ${e}_{f}$, the control input $T_y$ (expressed in the body frame), and tracking position error $(m)$.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <h3 class="title is-4">Comparative Performance in Real-world Tasks</h3>
+    <p>
+      We use our <strong>ConsDRED-SMPC</strong> as the tracking controller for a quadrotor.
+      The aim is to evaluate two properties of the trained ConsDRED: (i) <u>convergence quality in the real physical experiments</u>, and (ii) <u>generalization capability under unprecedented external forces</u>.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      Real-world trajectory tracking under variable external forces: the scenario 1 and 3 are applied for tracking performance evaluation.
+      Let the external forces from the left / right fans in scenario 1 / 3 be ${F1}_{l,s3}=2.5$ ($ms^{-1}$), ${F1}_{r,s3}=1.5$ ($ms^{-1}$); ${F2}_{l,s1}=3.5$ ($ms^{-1}$), ${F2}_{r,s1}=2.5$ ($ms^{-1}$); and ${F3}_{l,s3}=3.5$ ($ms^{-1}$), ${F3}_{r,s3}=2.5$ ($ms^{-1}$).
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      <strong>Real-world Scenario 1:</strong> tracking trajectories under external forces without obstacles, where the agent learns the aerodynamic effects like turbulent effects caused by dynamic rotor–rotor and rotor-airframe interactions in Flight Task 1-2.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/senarios_wind_no_obstacles.jpg" class="center" style="width:80%;"/>
+    </div>
+    <p>
+      <strong>Real-world Scenario 2:</strong> tracking trajectories around the static (no external forces) but dense obstacles, where the agent learns the turbulent effects from rotor-obstacle interactions in Flight Task 3-4.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/senarios_nowind_obstacles.jpg" class="center" style="width:80%;"/>
+    </div>
+    <p>
+      <strong>Real-world Scenario 3:</strong> tracking trajectories under external forces around dense obstacles, where the agent learns the comprehensive aerodynamic effects from a combination of the dynamic rotor–rotor, rotor-airframe, and rotor-obstacle interactions in Flight Task 5-6.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/senarios_wind_obstacles.jpg" class="center" style="width:80%;"/>
+    </div>
+    <p>
+      The influence of ConsDRED becomes even more evident in this real-world tracking experiments.
+      The contribution of ConsDRED rises significantly from $6.7\%$ to $57\%$ as the wind intensifies, transitioning from ${F1}_{l,s3}=2.5$ ($ms^{-1}$), ${F1}_{r,s3}=1.5$ ($ms^{-1}$) to ${F2}_{l,s1}=3.5$ ($ms^{-1}$), ${F2}_{r,s1}=2.5$ ($ms^{-1}$).
+      For details, please refer to the table below.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="columns is-centered has-text-centered">
+      <img src="projects/ConsDRED-SMPC/TABLE_V.jpg" class="center" style="width:80%;"/>
+    </div>
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2024constrained,
+      title={Constrained Reinforcement Learning Using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control},
+      author={Wang, Yanran and Boyle, David},
+      journal={IEEE Transactions on Automation Science and Engineering},
+      year={2024},
+      publisher={IEEE},
+      pages={1-18},
+      doi={10.1109/TASE.2024.3432405}
+    }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    This work was supported in part by the National Science Foundation (NSF)-UK Research and Innovation (UKRI) under Grant NE/T011467/1 and in part by the Engineering and Physical Sciences Research Council under Grant EP/X040518/1.
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
