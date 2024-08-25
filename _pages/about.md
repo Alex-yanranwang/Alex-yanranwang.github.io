@@ -14,6 +14,11 @@ His research interest lies in **Trustworthy Autonomous System Design**, with a f
 
 Beyond his academic pursuits, he has a deep passion for classical music and sports.
 
+Academic Services
+===
+I was invited to serve as a reviewer for several prominent conferences in the machine learning and robotics community during the recent 2023-2024, including ICLR, CoRL, ICRA, IROS, and CDC. Additionally, I served as a reviewer for leading journals such as IEEE Robotics and Automation Letters (RA-L), IEEE Transactions on Automation Science and Engineering (IEEE T-ASE), the International Journal of Robust and Nonlinear Control, and Aircraft Engineering and Aerospace Technology.
+
+
 **Reminder** [[Calendar](https://aideadlin.es/?sub=ML,RO)] 
 
 News
