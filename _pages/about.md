@@ -23,7 +23,7 @@ I was invited to serve as a reviewer for several prominent conferences in the ma
 
 News
 ===  
-* December 2024, our paper “[Adaptive Probabilistic Planning for the Uncertain and Dynamic Orienteering Problem](https://arxiv.org/pdf/2409.05545)” was accepted to the IEEE Internet of Things Journal (IEEE IOTJ).
+* December 2024, our paper “[Adaptive Probabilistic Planning for the Uncertain and Dynamic Orienteering Problem](https://arxiv.org/pdf/2409.05545)” was accepted to the IEEE Internet of Things Journal (IEEE IoT-J).
 * August 2024, I gave an invited online seminar at MIT, hosted by Prof. Gioele Zardini.
 * June 2024, our paper “[Constrained Reinforcement Learning using Distributional Representation for Trustworthy Quadrotor UAV Tracking Control](https://arxiv.org/abs/2302.11694)” was accepted to the IEEE Transactions on Automation Science and Engineering (IEEE T-ASE) !
 * May 2024, our paper “[Probabilistic Constrained Reinforcement Learning with Formal Interpretability](https://arxiv.org/abs/2307.07084)” was accepted to the 41st International Conference on Machine Learning (ICML). Will see you in Vienna, Austria, on July 21st-27th.
