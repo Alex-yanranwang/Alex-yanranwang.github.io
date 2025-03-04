@@ -23,7 +23,7 @@ I was invited to serve as a reviewer for several prominent conferences in the ma
 
 News
 ===  
-* Feb 2025, our paper “[Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge]([https://arxiv.org/pdf/2409.05545](https://arxiv.org/abs/2407.12663))” was accepted to the IEEE Internet of Things Journal (IEEE IoT-J).
+* Feb 2025, our paper “[Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge](https://arxiv.org/abs/2407.12663)” was accepted to the IEEE Internet of Things Journal (IEEE IoT-J).
 * December 2024, I gave an invited talk at College of Control Science and Engineering, Zhejiang University, hosted by Prof. Lei Cheng.                    
 * December 2024, our paper “[Adaptive Probabilistic Planning for the Uncertain and Dynamic Orienteering Problem](https://arxiv.org/pdf/2409.05545)” was accepted to the IEEE Internet of Things Journal (IEEE IoT-J).
 * August 2024, I gave an invited online seminar at MIT, hosted by Prof. Gioele Zardini.
