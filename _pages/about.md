@@ -16,7 +16,7 @@ Beyond his academic pursuits, he has a deep passion for classical music and spor
 
 Academic Services
 ===
-I was invited to serve as a reviewer for several prominent conferences in the machine learning and robotics community during the recent 2023-2024, including ICLR, CoRL, ICRA, IROS, and CDC. I also served as a reviewer for esteemed journals such as IEEE Robotics and Automation Letters (RA-L), IEEE Transactions on Automation Science and Engineering (IEEE T-ASE), the International Journal of Robust and Nonlinear Control, and Aircraft Engineering and Aerospace Technology.
+I was invited to serve as a reviewer for several prominent conferences in the machine learning and robotics community during the recent 2023-2024, including ICLR, CoRL, ICRA, IROS, and CDC. I also served as a reviewer for esteemed journals such as IEEE Robotics and Automation Letters (RA-L), IEEE Transactions on Automation Science and Engineering (IEEE T-ASE), IEEE Transactions on Industrial Electronics (IEEE T-IE), IEEE Transactions on Cybernetics (T-CYB), the International Journal of Robust and Nonlinear Control, and Aircraft Engineering and Aerospace Technology.
 
 
 **Reminder** [[Calendar](https://aideadlin.es/?sub=ML,RO)] 
